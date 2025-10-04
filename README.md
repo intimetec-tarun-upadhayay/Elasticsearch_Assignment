@@ -1,82 +1,104 @@
-# 📚 Book Search Application
+title: "📚 Book Search Application"
+description: >
+  A simple Book Search Application built with Node.js, Elasticsearch, and React.js.
+  Users can search for books by title, author, or category with fuzzy search,
+  phonetic search, aggregations, autocomplete, and pagination.
 
-A simple **Book Search Application** built with **Node.js**, **Elasticsearch**, and **React.js**. Users can search for books by title, author, or category with **fuzzy search, phonetic search, aggregations, autocomplete, and pagination**.  
+table_of_contents:
+  - Features
+  - Technologies
+  - Project_Structure
+  - Setup_Instructions
+    - Backend
+    - Frontend
+  - Usage
+  - Notes
+  - Backend_Code
+  - Frontend_Code
 
----
+features:
+  - "Search books by title, author, or category"
+  - "Fuzzy search for typo tolerance"
+  - "Phonetic search for better search matching"
+  - "Aggregations: Group results by author and year of publication"
+  - "Autocomplete suggestions for titles and authors"
+  - "Pagination support for search results"
+  - "Dynamic React frontend with loading state"
 
-## **Table of Contents**
+technologies:
+  backend:
+    - Node.js
+    - Express.js
+  search_engine:
+    - Elasticsearch
+  frontend:
+    - React.js
+    - Material-UI
+  api_requests:
+    - Axios
+  other:
+    - dotenv
 
-- [Features](#features)  
-- [Technologies](#technologies)  
-- [Project Structure](#project-structure)  
-- [Setup Instructions](#setup-instructions)  
-  - [Backend](#backend)  
-  - [Frontend](#frontend)  
-- [Usage](#usage)  
-- [Notes](#notes)  
+project_structure:
+  backend:
+    - app.js
+    - elastic.js
+    - indexBooks.js
+    - package.json
+    - routes:
+        - search.js
+    - .gitignore
+  frontend:
+    src:
+      - App.jsx
+      - services:
+          - api.js
+      - components:
+          - SearchBar.jsx
+          - BookList.jsx
+          - Loader.jsx
+    - package.json
 
----
+setup_instructions:
+  backend:
+    steps:
+      - "Clone the repo: git clone <repo-url> && cd backend"
+      - "Install dependencies: npm install"
+      - "Create a .env file with ELASTIC_CLOUD_ID, ELASTIC_USERNAME, ELASTIC_PASSWORD"
+      - "Index sample books: node indexBooks.js"
+      - "Start server: node app.js"
+      - "Backend runs at http://localhost:8080"
+  frontend:
+    steps:
+      - "Navigate to frontend folder: cd frontend"
+      - "Install dependencies: npm install"
+      - "Start frontend: npm start"
+      - "Frontend runs at http://localhost:3000"
 
-## **Features**
+usage:
+  instructions:
+    - "Use the search bar to enter title, author, or category"
+    - "Autocomplete suggestions appear while typing"
+    - "Aggregations by author/year are returned in the API"
+    - "Pagination supported via API request with page and size parameters"
+  example_request:
+    query: "Harry Potter"
+    category: "Fiction"
+    author: "J.K. Rowling"
+    page: 1
+    size: 10
+  example_response:
+    books: []
+    aggregations:
+      by_author: {}
+      by_year: {}
+    suggestions:
+      titles: []
+      authors: []
+    page: 1
+    size: 10
 
-- Search books by **title**, **author**, or **category**  
-- **Fuzzy search** for typo tolerance  
-- **Phonetic search** for better search matching  
-- **Aggregations**: Group results by author and year of publication  
-- **Autocomplete** suggestions for titles and authors  
-- **Pagination** support for search results  
-- Dynamic React frontend with **loading state**  
-
----
-
-## **Technologies**
-
-- **Backend**: Node.js, Express.js  
-- **Search Engine**: Elasticsearch (local or Elastic Cloud)  
-- **Frontend**: React.js, Material-UI  
-- **API Requests**: Axios  
-- **Other**: dotenv for environment variables  
-
----
-
-## **Project Structure**
-
-backend/
-│ app.js
-│ elastic.js
-│ indexBooks.js
-│ package.json
-│ routes/
-│ search.js
-│ .gitignore
-frontend/
-│ src/
-│ App.jsx
-│ services/api.js
-│ components/
-│ SearchBar.jsx
-│ BookList.jsx
-│ Loader.jsx
-│ package.json
-README.md
-
-
----
-
-## **Setup Instructions**
-
-### **Backend**
-
-1. **Clone the repo**  
-
-```bash
-git clone <repo-url>
-cd backend```
-
-2. **Install dependencies**
-```npm install```
-
-2. **Create a .env file**
-```ELASTIC_CLOUD_ID=<your-cloud-id>
-ELASTIC_USERNAME=<your-username>
-ELASTIC_PASSWORD=<your-password>```
+notes:
+  - "Ensure Elasticsearch is running locally or Elastic Cloud credentials are correct."
+  - "Backend and frontend must run simultaneously."
+  - "Use indexBooks.js to regenerate sample book data."
