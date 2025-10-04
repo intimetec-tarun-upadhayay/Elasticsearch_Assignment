@@ -7,14 +7,14 @@ description: >
 table_of_contents:
   - Features
   - Technologies
-  - Project_Structure
-  - Setup_Instructions
+  - Project Structure
+  - Setup Instructions
     - Backend
     - Frontend
   - Usage
   - Notes
-  - Backend_Code
-  - Frontend_Code
+  - Backend Code
+  - Frontend Code
 
 features:
   - "Search books by title, author, or category"
@@ -62,18 +62,18 @@ project_structure:
 setup_instructions:
   backend:
     steps:
-      - "Clone the repo: git clone <repo-url> && cd backend"
+      - "Clone the repository: git clone <repo-url> && cd backend"
       - "Install dependencies: npm install"
       - "Create a .env file with ELASTIC_CLOUD_ID, ELASTIC_USERNAME, ELASTIC_PASSWORD"
       - "Index sample books: node indexBooks.js"
       - "Start server: node app.js"
-      - "Backend runs at http://localhost:8080"
+      - "Backend runs at: http://localhost:8080"
   frontend:
     steps:
       - "Navigate to frontend folder: cd frontend"
       - "Install dependencies: npm install"
       - "Start frontend: npm start"
-      - "Frontend runs at http://localhost:3000"
+      - "Frontend runs at: http://localhost:3000"
 
 usage:
   instructions:
