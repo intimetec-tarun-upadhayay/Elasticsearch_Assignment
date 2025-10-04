@@ -1,4 +1,4 @@
-title: "📚 Book Search Application"
+Title: "📚 Book Search Application"
 description: >
   A simple Book Search Application built with Node.js, Elasticsearch, and React.js.
   Users can search for books by title, author, or category with fuzzy search,
